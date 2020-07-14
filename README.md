@@ -13,7 +13,7 @@ Before you continue, ensure you have met the following requirements:
 ## Start
 
 To start program run main.py script using Python.  
-If on windows you can also double click on desktop_controller.bat
+If on windows you can also double click on main.bat
 
 ## Controls
 
