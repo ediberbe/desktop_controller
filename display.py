@@ -2,7 +2,8 @@
 
 # pylint: disable = no-member, too-many-function-args, global-statement, invalid-name, line-too-long, unexpected-keyword-arg
 
-from ctypes import windll
+import ctypes
+from ctypes import wintypes
 import pygame as pg
 
 pg.init()
@@ -26,7 +27,7 @@ IS_ON = False
 def stop():
     """Closes window."""
     global IS_ON
-    pg.quit()
+    pg.display.quit()
     IS_ON = False
 
 def start():
@@ -36,9 +37,15 @@ def start():
     pg.display.set_caption("desktop_controller")
     ICON = pg.image.load("img/cog.png")
     pg.display.set_icon(ICON)
-    SetWindowPos = windll.user32.SetWindowPos
-    WINDOW = pg.display.set_mode((int(WIDTH * SCALE), int(HEIGHT * SCALE)))
-    SetWindowPos(pg.display.get_wm_info()['window'], -1, MONITOR.current_w - WIDTH - 100, MONITOR.current_h - HEIGHT - 100, 0, 0, 0x0001)
+    #SetWindowPos = ctypes.windll.user32.SetWindowPos
+    WINDOW = pg.display.set_mode((int(WIDTH * SCALE), int(HEIGHT * SCALE)),pg.NOFRAME)
+    
+    hwnd = pg.display.get_wm_info()['window']
+    user32 = ctypes.WinDLL("user32")
+    user32.SetWindowPos.restype = wintypes.HWND
+    user32.SetWindowPos.argtypes = [wintypes.HWND, wintypes.HWND, wintypes.INT, wintypes.INT, wintypes.INT, wintypes.INT, wintypes.UINT]
+    user32.SetWindowPos(pg.display.get_wm_info()['window'], -1,  MONITOR.current_w - WIDTH - 100, MONITOR.current_h - HEIGHT - 100, 0, 0, 0x0001)
+
     IS_ON = True
 
 def change_color(img, color):
