@@ -80,8 +80,8 @@ class Xboxcontroller:
         {   # MOUSE
             0: [lambda: None, lambda: keyboard_tap("m", pynput.keyboard.Key.cmd), lambda: None, lambda: keyboard_tap("=", pynput.keyboard.Key.ctrl)], # Y
             1: [lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.media_volume_mute), lambda: None, lambda: keyboard_tap("-", pynput.keyboard.Key.ctrl)], # X
-            2: [lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.media_volume_up, count=5), lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.right, pynput.keyboard.Key.alt)], # B
-            3: [lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.media_volume_down, count=5), lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.left, pynput.keyboard.Key.alt)], # A
+            2: [lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.media_volume_up, count=2), lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.right, pynput.keyboard.Key.alt)], # B
+            3: [lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.media_volume_down, count=2), lambda: None, lambda: keyboard_tap(pynput.keyboard.Key.left, pynput.keyboard.Key.alt)], # A
             4: [lambda: None, lambda: None, lambda: None, lambda: None],
             5: [lambda: None, lambda: None, lambda: None, lambda: None],
             6: [lambda: mouse.release(pynput.mouse.Button.right), lambda: mouse.press(pynput.mouse.Button.right), lambda: mouse.release(pynput.mouse.Button.right), lambda: mouse.press(pynput.mouse.Button.right)], # RB
