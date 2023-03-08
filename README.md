@@ -21,7 +21,8 @@ To start program run main.py script using Python. If using Windows you can doubl
 
 ## Controls
 
-Holding LT modifies button function.
+! When entering keyboard mode, click on the field you want to type in beforehand.
+! Holding LT modifies button function.
 
 ![](https://i.imgur.com/3SXZMO5.png)
 
