@@ -17,7 +17,7 @@ You can edit multiple values from the config.ini file. Also, with minimal progra
 
 ## Start
 
-To start program run main.py script using Python or double click on main.bat
+To start program run main.py script using Python. If using Windows you can double click on main.bat
 
 ## Controls
 
