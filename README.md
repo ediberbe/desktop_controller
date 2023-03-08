@@ -4,7 +4,6 @@ Control mouse/keyboard using controller.
 ## Prerequisites
 
 Before you continue, ensure you have met the following requirements:
-* You have Windows as the operating system of your computer.
 * You have installed a compatible [Python](https://www.python.org/downloads/) version.  
 * You have installed a compatible [PyGame](https://pypi.org/project/pygame/) version. ```pip install pygame```
 * You have installed a compatible [Inputs](https://pypi.org/project/inputs/) version. ```pip install inputs```
@@ -21,7 +20,7 @@ To start program run main.py script using Python. If using Windows you can doubl
 
 ## Controls
 
-Holding LT modifies button function. When entering keyboard mode, a window will appear that lets you easily select the desired character.
+Holding LT modifies button function. Also, when entering keyboard mode, a window will appear that lets you easily select the desired character.  
 
 ![](https://i.imgur.com/3SXZMO5.png)
 
